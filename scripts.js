@@ -19,7 +19,33 @@ const getCurrent = async(lat,lon)=>{
    console.log(weather.main.temp);
    console.log(weather.wind.speed);
 }
+//get 5 day forecast
+const getfiveday = async(lat,lon)=>{
+    console.log(`city ${
+        lat,
+        lon
+    }`);
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=cdbf4c47896d6a9d1bf49f14382cbc78`);
+    // get the body out of the response
+   const forecast = await response.json(); 
+   console.log(forecast);
+   ///log the data
+   $(".Forecast").append($(`<div>${forecast.list[0].dt_txt}</div>`));
+ //  const Image = $(`<img>`);
+  // Image.attr('src',`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`);
+//$(".Forecast").append(Image);
+  // $(".Forecast").append($(`<p>Temp: ${weather.main.temp}</p>`));
+  // $(".Forecast").append($(`<p>Wind: ${weather.wind.speed}</p>`));
+  // $(".Forecast").append($(`<p>Humidity: ${weather.main.humidity}</p>`));
+  // console.log(weather);
+  // console.log(weather.name);
+ //  console.log(weather.main.temp);
+  // console.log(weather.wind.speed);
+   
+ 
 
+}
+     
 
 const getCoords=  async(city) =>{
 console.log(city);
@@ -31,6 +57,7 @@ const lat = data[0].lat;
 const lon = data[0].lon;
 
  getCurrent(lat, lon);
+ getfiveday(lat, lon);
 }
 
 
