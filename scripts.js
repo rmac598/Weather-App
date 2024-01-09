@@ -25,21 +25,33 @@ const getfiveday = async(lat,lon)=>{
         lat,
         lon
     }`);
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=cdbf4c47896d6a9d1bf49f14382cbc78`);
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=cdbf4c47896d6a9d1bf49f14382cbc78`);
     // get the body out of the response
    const forecast = await response.json(); 
    console.log(forecast);
-
-   var start = dayjs().add(1, "day").startof("day").unix();
-   var end = dayjs().add(6, "day").startof("day").unix();
-   ///log the data
   
-   $(".Forecast").append($(`<div>${forecast.list[0].dt_txt}</div>`));
-   $(".Forecast").append($(`<div>${forecast.list[0].main.temp}</div>`));
-   $(".Forecast").append($(`<div>${forecast.list[0].wind.speed}</div>`));
-   $(".Forecast").append($(`<div>${forecast.list[0].main.humidity}</div>`));
+
+   const hour12 = forecast.list.filter((list) => list.dt_txt.includes("12:00"));
+   console.log(hour12);
    
- //  const Image = $(`<img>`);
+   hour12.forEach((index) => { 
+  
+   $(".Forecast").append($(`<div >${index.dt_txt}</div>`));
+   $(".Forecast").append($(`<div>${index.main.temp}</div>`));
+   $(".Forecast").append($(`<div>${index.wind.speed}</div>`));
+   $(".Forecast").append($(`<div>${index.main.humidity}</div>`));
+   
+
+  });
+   
+ 
+   /*$(".Forecast").append($(`<div>${forecast.list[12].dt_txt}</div>`));
+   $(".Forecast").append($(`<div>${forecast.list[12].main.temp}</div>`));
+   $(".Forecast").append($(`<div>${forecast.list[12].wind.speed}</div>`));
+   $(".Forecast").append($(`<div>${forecast.list[12].main.humidity}</div>`));*/
+   
+ 
+// const Image = $(`<img>`);
   // Image.attr('src',`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`);
 //$(".Forecast").append(Image);
   // $(".Forecast").append($(`<p>Temp: ${weather.main.temp}</p>`));
