@@ -53,22 +53,7 @@ $(".Forecast").append($(`<div class="col bg-danger m-3 text-center" >
   });
    
  
-   /*$(".Forecast").append($(`<div>${forecast.list[12].dt_txt}</div>`));
-   $(".Forecast").append($(`<div>${forecast.list[12].main.temp}</div>`));
-   $(".Forecast").append($(`<div>${forecast.list[12].wind.speed}</div>`));
-   $(".Forecast").append($(`<div>${forecast.list[12].main.humidity}</div>`));*/
    
- 
-// mage = $(`<img>`);const I
-  // Image.attr('src',`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`);
-//$(".Forecast").append(Image);
-  // $(".Forecast").append($(`<p>Temp: ${weather.main.temp}</p>`));
-  // $(".Forecast").append($(`<p>Wind: ${weather.wind.speed}</p>`));
-  // $(".Forecast").append($(`<p>Humidity: ${weather.main.humidity}</p>`));
-  // console.log(weather);
-  // console.log(weather.name);
- //  console.log(weather.main.temp);
-  // console.log(weather.wind.speed);
  
    }
  
@@ -87,12 +72,23 @@ const lon = data[0].lon;
 
  getCurrent(lat, lon);
  getfiveday(lat, lon);
-
- localStorage.setItem("getCurrent", city);
  
+ 
+
 }
+function searched() {
+  let addCity = JSON.parse(localStorage.getItem("newCity"));
+  if (!Array.isArray(addCity)) {
+    addCity = [];
+  }
+  addCity.unshift($(".city").val());
+  localStorage.setItem("city", JSON.stringify(addCity))
+  displayLocal();
+};
 
-
+function displayLocal() {
+  let localCity = JSON.parse(localStorage.getItem("newCity"));
+}
 
 //listen for a click
 $(".weather_btn").on("click",()=>{
