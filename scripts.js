@@ -21,7 +21,8 @@ const getCurrent = async(lat,lon)=>{
 }
 //get 5 day forecast
 const getfiveday = async(lat,lon)=>{
-    console.log(`city ${
+  $(".Forecast").empty();
+  console.log(`city ${
         lat,
         lon
     }`);
@@ -30,18 +31,24 @@ const getfiveday = async(lat,lon)=>{
    const forecast = await response.json(); 
    console.log(forecast);
   
-
+   
    const hour12 = forecast.list.filter((list) => list.dt_txt.includes("12:00"));
    console.log(hour12);
+   const myImage = $(`<img>`);
+   myImage.attr('src',`https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`);
+   
    
    hour12.forEach((index) => { 
   
-   $(".Forecast").append($(`<div >${index.dt_txt}</div>`));
-   $(".Forecast").append($(`<div>${index.main.temp}</div>`));
-   $(".Forecast").append($(`<div>${index.wind.speed}</div>`));
-   $(".Forecast").append($(`<div>${index.main.humidity}</div>`));
+  
+$(".Forecast").append($(`<div class="col bg-danger m-3 text-center" >
+  <p>${myImage}</p>
+  <p>${index.dt_txt}</p>
+   <p>${index.main.temp}</p>
+  <p>${index.wind.speed}</p>
+   <p>${index.main.humidity}</p>
    
-
+  </div>`))
   });
    
  
@@ -51,7 +58,7 @@ const getfiveday = async(lat,lon)=>{
    $(".Forecast").append($(`<div>${forecast.list[12].main.humidity}</div>`));*/
    
  
-// const Image = $(`<img>`);
+// mage = $(`<img>`);const I
   // Image.attr('src',`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`);
 //$(".Forecast").append(Image);
   // $(".Forecast").append($(`<p>Temp: ${weather.main.temp}</p>`));
