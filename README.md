@@ -15,24 +15,11 @@
 
 <!-- PROJECT LOGO -->
 
-<div align="center">
-  <a href="https://github.com/404pandas/PARSR">
-    <img src="/client/src/images/FFRlogo.png" alt="Logo" width="80" height="80">
-  </a>
 
-<h3 align="center">PARSR</h3>
 
-  <p align="center">
-Project Animal Reunification Search & Rescue    <br />
-    <a href="https://github.com/404pandas/PARSR"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/404pandas/PARSR">View Demo(Broken)</a>
-    ·
-    <a href="https://github.com/404pandas/PARSR/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/404pandas/PARSR/issues">Request Feature</a>
-  </p>
+<h3 align="center">WEATHER DASHBOARD</h3>
+
+  
 </div>
 
 <!-- TABLE OF CONTENTS -->
