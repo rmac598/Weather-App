@@ -40,7 +40,10 @@ const getfiveday = async(lat,lon)=>{
   
   
 $(".Forecast").append($(`<div class="col bg-danger m-3 text-center" >
-  
+
+
+
+   <p><img src="https://openweathermap.org/img/w/${index.weather[0].icon}.png"/></p>
   <p>${index.dt_txt}</p>
    <p>${index.main.temp}</p>
   <p>${index.wind.speed}</p>
@@ -86,6 +89,7 @@ const lon = data[0].lon;
  getfiveday(lat, lon);
 
  localStorage.setItem("getCurrent", city);
+ 
 }
 
 
