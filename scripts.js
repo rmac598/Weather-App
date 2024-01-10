@@ -34,15 +34,13 @@ const getfiveday = async(lat,lon)=>{
    
    const hour12 = forecast.list.filter((list) => list.dt_txt.includes("12:00"));
    console.log(hour12);
-   const myImage = $(`<img>`);
-   myImage.attr('src',`https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`);
    
    
    hour12.forEach((index) => { 
   
   
 $(".Forecast").append($(`<div class="col bg-danger m-3 text-center" >
-  <p>${myImage}</p>
+  
   <p>${index.dt_txt}</p>
    <p>${index.main.temp}</p>
   <p>${index.wind.speed}</p>
@@ -86,6 +84,8 @@ const lon = data[0].lon;
 
  getCurrent(lat, lon);
  getfiveday(lat, lon);
+
+ localStorage.setItem("getCurrent", city);
 }
 
 
