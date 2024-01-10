@@ -63,7 +63,7 @@ $(".Forecast").append($(`<div class="col bg-danger m-3 text-center" >
 
 const getCoords=  async(city) =>{
 console.log(city);
- const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=10&appid=cdbf4c47896d6a9d1bf49f14382cbc78`);
+ const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=10&appid=cdbf4c47896d6a9d1bf49f14382cbc78`);
  // get the body out of the response
 const data = await response.json();
 // get our values
