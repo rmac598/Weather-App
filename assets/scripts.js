@@ -72,7 +72,8 @@ const lon = data[0].lon;
 
  getCurrent(lat, lon);
  getfiveday(lat, lon);
- 
+ searched();
+ displayLocal();
  
 
 }
@@ -82,14 +83,22 @@ function searched() {
     addCity = [];
   }
   addCity.unshift($(".city").val());
-  localStorage.setItem("city", JSON.stringify(addCity))
-  displayLocal();
+  localStorage.setItem("newCity", JSON.stringify(addCity))
+  
 };
 
 function displayLocal() {
   let localCity = JSON.parse(localStorage.getItem("newCity"));
-}
+  console.log(localCity);
 
+  if (localCity) {
+      const lastCity = localCity[(localCity = [0])];
+      const listCity = $(
+          `<button type="button" class="btn btn-warning mb-1">${lastCity}</button>`
+      );
+      $(".boots").append(listCity);
+  }
+}
 //listen for a click
 $(".weather_btn").on("click",()=>{
     // get the value form the form
