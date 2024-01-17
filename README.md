@@ -52,6 +52,8 @@
 ## About The Project
 
 <!-- Add screenshots using the following format: -->
+<img src="assets/Screenshot (2).png" />
+
 <!-- ![Screenshot alt description](directPathOfScreenshots) -->
 
 T
