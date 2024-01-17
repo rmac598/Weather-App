@@ -6,10 +6,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Contributors](https://img.shields.io/github/contributors/404pandas/PARSR.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/PARSR/graphs/contributors)
-[![Forks](https://img.shields.io/github/forks/404pandas/PARSR.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/PARSR/network/members)
-[![Stargazers](https://img.shields.io/github/stars/404pandas/PARSR.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/PARSR/stargazers)
-[![Issues](https://img.shields.io/github/issues/404pandas/PARSR.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/PARSR/issues)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=plastic&logo=appveyor&logo=linkedin&colorB=555)](https://linkedin.com/in/LinkedInUsername)
+
 
 </div>
 
@@ -52,11 +49,11 @@
 ## About The Project
 
 <!-- Add screenshots using the following format: -->
-<img src="assets/Screenshot (2).png" />
+
 
 <!-- ![Screenshot alt description](directPathOfScreenshots) -->
 
-T
+
 ### Built With
 
 <!--  Dayjs, gsap, jquery, materialize, javascript, css, html, node.js npm vs code -->
@@ -84,7 +81,7 @@ You will see current weather and the five day forecast
 
 ## Usage
 
-Once the app is functional, screenshots will be added in this section.
+<img src="assets/Screenshot (2).png" />
 
 <!-- ROADMAP -->
 
@@ -125,7 +122,7 @@ See LICENSE.txt for more information.
 
 Ryan McIntyre rmcintyre598@gmail.com
 
-Project Link: [https://github.com/404pandas/PARSR](https://github.com/404pandas/PARSR)
+Project Link: [https://rmac598.github.io/Weather-App/](https://rmac598.github.io/Weather-App/)
 
 <!-- ACKNOWLEDGMENTS -->
 
